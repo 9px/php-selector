@@ -21,7 +21,7 @@ class SelectorDOM {
         $this->xpath = new DOMXpath($data);
     } else {
         $dom = new DOMDocument();
-        @$dom->loadHTML($data);
+        @$dom->loadHTML('<?xml encoding="UTF-8">'.$data);
         $this->xpath = new DOMXpath($dom);
     }
   }
